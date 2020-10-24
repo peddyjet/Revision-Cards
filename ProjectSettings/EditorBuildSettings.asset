@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EditExistingSchool.unity
     guid: e6b257d9537efb84ab60acb5ab3f90f3
+  - enabled: 1
+    path: Assets/Scenes/OpenShcoolForCardEditing.unity
+    guid: 17e263a351dcd8d46a449491ce71bf38
+  - enabled: 1
+    path: Assets/Scenes/CardMaker.unity
+    guid: 7d366cd89cf0e084a84a3fd90d57c9c4
+  - enabled: 1
+    path: Assets/Scenes/OSSAC.unity
+    guid: 651c737c143dd7e4fa7b174820e9a354
   m_configObjects: {}

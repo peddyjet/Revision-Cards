@@ -11,6 +11,8 @@ public class ResetCache : MonoBehaviour
         constants.focusedShcoolIndex = int.MaxValue;
         constants.mainCore = new MainCore();
         constants.mainCore.shcools = new School[0];
+        constants.questionanswercache = new KeyValuePair<string, string>(string.Empty,string.Empty);
+        constants.focusedSubjectIndex = int.MaxValue;
         constants.Deserialize();
     }
 

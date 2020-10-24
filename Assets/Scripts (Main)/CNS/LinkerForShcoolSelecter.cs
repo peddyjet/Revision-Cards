@@ -51,6 +51,19 @@ public class LinkerForShcoolSelecter : MonoBehaviour
 
         StaticSceneLoader.ForceLoadScene("CreateNewSchool");
     }
+    public void Package(string scene)
+    {
+        SchoolBox shcoolBox = null;
+        foreach (var item in FindObjectsOfType<SchoolBox>())
+        {
+            if (item.GetComponent<TextMeshProUGUI>().color == Color.red) { shcoolBox = item; break; }
+        }
+        if (shcoolBox == null) { return; }
+
+        constants.focusedShcoolIndex = (uint)constants.mainCore.shcools.ToList().IndexOf(shcoolBox.shcool);
+
+        StaticSceneLoader.ForceLoadScene(scene);
+    }
     public void RemoveShcool()
     {
         SchoolBox shcoolBox = null;

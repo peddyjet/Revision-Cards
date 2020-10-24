@@ -16,6 +16,8 @@ public class Constants : ScriptableObject
 {
     public MainCore mainCore = new MainCore();
     public uint focusedShcoolIndex;
+    public KeyValuePair<string, string> questionanswercache;
+    public uint focusedSubjectIndex;
 
     public void Serialize()
     {
