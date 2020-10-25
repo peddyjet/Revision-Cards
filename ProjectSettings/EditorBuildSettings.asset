@@ -24,14 +24,14 @@ EditorBuildSettings:
     path: Assets/Scenes/OSSAC.unity
     guid: 651c737c143dd7e4fa7b174820e9a354
   - enabled: 1
-    path: Assets/Scenes/OpenShcoolForTesting.unity
-    guid: 74a14b3a7aef6ea4290fc2d8cd7cdda9
-  - enabled: 1
     path: Assets/Scenes/NotificationSettings.unity
     guid: a823e7b759097e6488ad3329ae907640
   - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: 5a5ed318d3dffe945a489fe49a2bc9b5
+  - enabled: 1
+    path: Assets/Scenes/OpenShcoolForTesting.unity
+    guid: 74a14b3a7aef6ea4290fc2d8cd7cdda9
   - enabled: 1
     path: Assets/Scenes/OpenSubjectForTesting.unity
     guid: 604081417218eb14b85f8bbb34263cb0

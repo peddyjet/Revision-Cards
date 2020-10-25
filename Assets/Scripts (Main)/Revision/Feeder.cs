@@ -42,7 +42,7 @@ public class Feeder : MonoBehaviour
             constants.ok = o;
             constants.good = g;
 
-            StaticSceneLoader.ForceLoadScene("OpenSchoolForTesting");
+            StaticSceneLoader.ForceLoadScene("OpenShcoolForTesting");
         }
 
        

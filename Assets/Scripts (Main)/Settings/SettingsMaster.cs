@@ -9,7 +9,6 @@ public class SettingsMaster : MonoBehaviour
 {
     #region Variables
     [SerializeField] Toggle notificationsOn = null;
-    [SerializeField] TMP_InputField timeForReminders = null;
     [Space]
     [SerializeField] Dates dontKnow;
     [SerializeField] Dates mightKnow;
@@ -43,7 +42,6 @@ public class SettingsMaster : MonoBehaviour
         sf.SaveAsJson(new SerializableSettings
         {
             UseNotifications = notificationsOn.isOn,
-            HourToSendNotifications = int.Parse(timeForReminders.text),
 
             DontKnow = new SerializableDates
             {
@@ -86,7 +84,6 @@ public class SettingsMaster : MonoBehaviour
         if (x == null) { return; }
 
         notificationsOn.isOn = x.UseNotifications;
-        timeForReminders.text = x.HourToSendNotifications.ToString();
 
         dontKnow.monday.isOn = x.DontKnow.monday;
         dontKnow.tuesday.isOn = x.DontKnow.tuesday;
@@ -144,5 +141,4 @@ public class SerializableSettings
    public SerializableDates MightKnow { get; set; }
    public SerializableDates IKnow { get; set; }
    public bool UseNotifications { get; set; }
-   public int HourToSendNotifications { get; set; }
 }
