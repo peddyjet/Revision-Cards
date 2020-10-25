@@ -2176,6 +2176,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1991399011}
+        m_MethodName: PlayClipAtPoint
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 7cf17fffd1b99d542b1d2e86967c3bea,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &988227929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,6 +3708,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1991399011}
+        m_MethodName: PlayClipAtPoint
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f76d90ac6842edb46a0002543ab26fbb,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1777931252
 GameObject:
   m_ObjectHideFlags: 0
@@ -4183,6 +4207,7 @@ GameObject:
   - component: {fileID: 1991399006}
   - component: {fileID: 1991399010}
   - component: {fileID: 1991399009}
+  - component: {fileID: 1991399011}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4266,6 +4291,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7addf0b0f372324bb0925189adf7bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1991399011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991399005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416200b6f04d5584281f97ff4dd3d5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2002612094

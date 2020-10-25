@@ -68,11 +68,11 @@ public class CardMakerManager : MonoBehaviour
 
         var subjectsTrue = constants.mainCore.shcools[constants.focusedShcoolIndex].Subjects.ToList();
         if (subjectsTrue[subjectsTrue.IndexOf(currentSubject)].QuestionCards == null)
-        { subjectsTrue[subjectsTrue.IndexOf(currentSubject)].QuestionCards = new QuestionCard[] { new QuestionCard { Question = question.text, Answer = answer.text, Proficiency = 2 } }; }
+        { subjectsTrue[subjectsTrue.IndexOf(currentSubject)].QuestionCards = new QuestionCard[] { new QuestionCard { Question = question.text, Answer = answer.text, Proficiency = 1 } }; }
         else
         {
             var i = subjectsTrue[subjectsTrue.IndexOf(currentSubject)].QuestionCards.ToList();
-            i.Add(new QuestionCard { Question = question.text, Answer = answer.text, Proficiency = 2 });
+            i.Add(new QuestionCard { Question = question.text, Answer = answer.text, Proficiency = 1 });
             subjectsTrue[subjectsTrue.IndexOf(currentSubject)].QuestionCards = i.ToArray();
         }
         constants.mainCore.shcools[constants.focusedShcoolIndex].Subjects = subjectsTrue.ToArray();

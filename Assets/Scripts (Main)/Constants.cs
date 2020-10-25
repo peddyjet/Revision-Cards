@@ -19,6 +19,14 @@ public class Constants : ScriptableObject
     public KeyValuePair<string, string> questionanswercache;
     public uint focusedSubjectIndex;
 
+    public bool bad;
+    public bool ok;
+    public bool good;
+
+    public Subject feededSubject;
+
+    public bool Useless;
+
     public void Serialize()
     {
        new SavingSystem<MainCore>().SaveAsJson(mainCore,"SaveFile.X1SaveFile");
