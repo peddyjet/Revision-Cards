@@ -33,18 +33,33 @@ public class NotificationManager : MonoBehaviour
         };
 
         AndroidNotificationCenter.RegisterNotificationChannel(defaultNotificationChannel);
-      
+
+        for (double i = 1; i < 7; i++)
+        {
+            bool inToNextYear = (DateTime.Today.DayOfYear + i > 365 && !DateTime.IsLeapYear(DateTime.Today.Year))
+                || (DateTime.Today.DayOfYear + i > 366 && DateTime.IsLeapYear(DateTime.Today.Year));
+
+            int year = DateTime.Today.Year;
+            if (inToNextYear) { year++; }
+
+            int day = (int)i + DateTime.Today.Day;
+            if (DateTime.DaysInMonth(year,DateTime.Today.Month) - day < 0) { day = Mathf.Abs(DateTime.DaysInMonth(year, DateTime.Today.Month) - day); }
+
+            int month = DateTime.Today.Month;
+            if (inToNextYear) { month++; }
+            if (DateTime.Today.Day + i != day) { month++; }
+
             AndroidNotification androidNotification = new AndroidNotification()
             {
                 Title = "It's time to revise!",
                 Text = "Remember to look through your revision cards!",
-                SmallIcon = "MainS",
-                LargeIcon = "MainL",
-                RepeatInterval = new System.TimeSpan(1, 0, 0, 0, 0),
-                FireTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month,DateTime.Today.Day,12,0,0)
+                SmallIcon = "mains",
+                LargeIcon = "mainl",
+                FireTime = new DateTime(year, month, day, 12, 0, 0)
             };
-        AndroidNotificationCenter.SendNotification(androidNotification, "default_channel");
-
+            AndroidNotificationCenter.SendNotification(androidNotification, "default_channel");
+        }
+       
         
        
     }
