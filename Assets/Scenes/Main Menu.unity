@@ -1657,7 +1657,7 @@ MonoBehaviour:
 
 
     To get started, press the
-    plus button to create a new shcool. After that, create all of your revision cards
+    plus button to create a new school. After that, create all of your revision cards
     with the middle button. Finally, you can test yourself with the target button!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2145c7aa7467eaf4e9a1f4a9b2be2c8b, type: 2}

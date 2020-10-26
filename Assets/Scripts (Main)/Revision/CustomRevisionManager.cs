@@ -96,4 +96,9 @@ public class CustomRevisionManager : MonoBehaviour
         StaticSceneLoader.ForceLoadScene("Test");
     }
 
+    private void Start()
+    {
+        constants.Deserialize();
+    }
+
 }
