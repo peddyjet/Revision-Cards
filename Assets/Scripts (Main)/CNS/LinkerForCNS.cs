@@ -12,8 +12,13 @@ public class LinkerForCNS : MonoBehaviour
     [SerializeField] GameObject areaToShowSubjects = null;
     [SerializeField] SubjectBox template = null;
     [Space]
-    [SerializeField] TextMeshProUGUI title = null;
-    
+    [SerializeField] TMP_InputField title = null;
+    [Space]
+    [SerializeField] Animator fail = null;
+    [Space]
+    [SerializeField] AudioClip successac = null;
+    [SerializeField] AudioClip failiureac = null;
+
 
     private void Awake()
     {
@@ -21,7 +26,10 @@ public class LinkerForCNS : MonoBehaviour
     }
 
     public void AddToTempSubjects(string name) => cachedSubjects.Add(new Subject { Name = name });
-    public void AddToTempSubjects(TextMeshProUGUI name) { cachedSubjects.Add(new Subject { Name = name.text }); name.text = string.Empty; }
+    public void AddToTempSubjects(TMP_InputField name) { if (name.text == string.Empty)
+        { FindObjectOfType<ClipAtPointR>().PlayClipAtPoint(failiureac); fail.SetTrigger("Fail"); return; }
+        FindObjectOfType<ClipAtPointR>().PlayClipAtPoint(successac);
+        cachedSubjects.Add(new Subject { Name = name.text }); name.text = string.Empty; }
     public void RemoveFromTempSubjects(Subject subject) => cachedSubjects.Remove(subject);
     public void AssistedRemove()
     {
@@ -32,7 +40,9 @@ public class LinkerForCNS : MonoBehaviour
     }
     public void Save()
     {
-        if(constants.focusedShcoolIndex != int.MaxValue)
+        if (title.text == string.Empty) { FindObjectOfType<ClipAtPointR>().PlayClipAtPoint(failiureac); fail.SetTrigger("Fail"); return; }
+        
+        if (constants.focusedShcoolIndex != int.MaxValue)
         {
             var i = constants.mainCore.shcools.ToList();
             i.Remove(constants.mainCore.shcools[constants.focusedShcoolIndex]); constants.mainCore.shcools = i.ToArray();
@@ -47,7 +57,7 @@ public class LinkerForCNS : MonoBehaviour
        else { var i = constants.mainCore.shcools.ToList(); i.Add(newSchcool); constants.mainCore.shcools = i.ToArray(); }
 
         constants.Serialize();
-
+        
         StaticSceneLoader.ForceLoadScene(0);
     }
 

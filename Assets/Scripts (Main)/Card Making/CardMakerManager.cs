@@ -16,6 +16,9 @@ public class CardMakerManager : MonoBehaviour
     [Space]
     [SerializeField] Animator success = null;
     [SerializeField] Animator failiure = null;
+    [Space]
+    [SerializeField] AudioClip successac = null;
+    [SerializeField] AudioClip failiureac = null;
 
     Dictionary<string, Subject> subjects;
     Subject currentSubject;
@@ -56,7 +59,7 @@ public class CardMakerManager : MonoBehaviour
     }
     public void Save()
     {
-        if (dropdown.value == 0) { failiure.SetTrigger("Fail"); return; }
+        if (dropdown.value == 0 || question.text == string.Empty || answer.text == string.Empty) { FindObjectOfType<ClipAtPointR>().PlayClipAtPoint(failiureac); failiure.SetTrigger("Fail"); return; }
 
         if (constants.questionanswercache.Key != "" && constants.questionanswercache.Value != "" && constants.focusedShcoolIndex != int.MaxValue && constants.focusedSubjectIndex != int.MaxValue)
         {
@@ -77,6 +80,7 @@ public class CardMakerManager : MonoBehaviour
         }
         constants.mainCore.shcools[constants.focusedShcoolIndex].Subjects = subjectsTrue.ToArray();
         constants.Serialize();
+        FindObjectOfType<ClipAtPointR>().PlayClipAtPoint(successac);
         success.SetTrigger("Success");
         question.text = string.Empty;
         answer.text = string.Empty;
