@@ -55,7 +55,7 @@ public class NotificationManager : MonoBehaviour
                 Text = "Remember to look through your revision cards!",
                 SmallIcon = "mains",
                 LargeIcon = "mainl",
-                FireTime = new DateTime(year, month, day, 12, 0, 0)
+                FireTime = new DateTime(year, month, day, 16, 0, 0)
             };
             AndroidNotificationCenter.SendNotification(androidNotification, "default_channel");
         }

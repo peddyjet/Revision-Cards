@@ -71,7 +71,9 @@ public class Drag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClickH
                 newLocation += new Vector3(3000, 0, 0);
             }
 
-            StartCoroutine(SmoothMove( transform.position, newLocation, easing,()=> { if (isCorrect) { FindObjectOfType<TestMGR>().Right(this); } else { FindObjectOfType<TestMGR>().Wrong(this); } }));
+            StartCoroutine(SmoothMove(transform.position, newLocation, easing, ()
+                => { if (isCorrect && flippedOver) { FindObjectOfType<TestMGR>().Right(this); }
+                    else if (flippedOver) { FindObjectOfType<TestMGR>().Wrong(this); } else { return; } }));
             panelLocation = newLocation;
         }
         else
@@ -118,7 +120,7 @@ public class Drag : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerClickH
     {
         if (flippedOver) { return; }
         flippedOver = true;
-        StartCoroutine(SmoothRotate( 0.5f, () => 
+        StartCoroutine(SmoothRotate( 0.25f, () => 
         {
             subjectQ.gameObject.SetActive(true);
             subjectA.gameObject.SetActive(false);
