@@ -1652,7 +1652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Revison Cards: By X1 Games. This application is desingned to
+  m_text: 'Welcome to Revison Cards: By X1 Games. This application is designed to
     help anybody make, and revise from, quizzes.
 
 
