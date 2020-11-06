@@ -79,7 +79,7 @@ public class Drag : MonoBehaviour, IPointerClickHandler
         {
             float seconds = 1f;
 
-            timer += 0.01f;
+            timer += Time.deltaTime;
             if(timer >= seconds / 180)
             {
                 transform.Rotate(1, 0, 0);
