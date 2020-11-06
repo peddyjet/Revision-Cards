@@ -96,20 +96,5 @@ public class Drag : MonoBehaviour, IPointerClickHandler
       //  GetComponent<Animator>().SetTrigger("Go");
     }
 
-    public void Middle()
-    {
-        subjectQ.gameObject.SetActive(false);
-        subjectA.gameObject.SetActive(true);
-
-        questionQ.gameObject.SetActive(false);
-        answerA.gameObject.SetActive(true);
-    }
-    public void End()
-    {
-        gameObject.AddComponent(typeof(DragR));
-
-        Destroy(GetComponent<Animator>());
-    }
-
     public void Error() => throw new Exception();
 }
