@@ -8,7 +8,7 @@ public class DragR : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     private Vector3 panelLocation;
     [SerializeField] float percentThreshold = 0.75f;
-    [SerializeField] float easing = 0.5f;
+    [SerializeField] float easing = 0.2f;
 
     new RectTransform transform;
 
@@ -19,9 +19,8 @@ public class DragR : MonoBehaviour, IDragHandler, IEndDragHandler
     }
     public void OnDrag(PointerEventData eventData)
     {
-       
             Debug.Log(1);
-            float difference = eventData.pressPosition.x - eventData.position.x;
+            float difference = (eventData.pressPosition.x - eventData.position.x);
             transform.position = panelLocation - new Vector3(difference, 0, 0);
         
     }
@@ -30,7 +29,7 @@ public class DragR : MonoBehaviour, IDragHandler, IEndDragHandler
     {
        
             Debug.Log(2);
-            float percentage = (eventData.pressPosition.x - eventData.position.x) / 3;
+            float percentage = ((eventData.pressPosition.x - eventData.position.x) / 3);
             if (Mathf.Abs(percentage) >= percentThreshold)
             {
                 bool isCorrect = false;

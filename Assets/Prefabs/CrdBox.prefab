@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 1278144307522462401}
   - component: {fileID: 8269132258598421532}
   - component: {fileID: -5435705896180679665}
+  - component: {fileID: -8002146222929760368}
+  - component: {fileID: 492823028578974646}
+  - component: {fileID: -7028576288528102743}
   m_Layer: 5
   m_Name: CrdBox
   m_TagString: Untagged
@@ -96,18 +99,18 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 43.7
+  m_fontSizeBase: 43.7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 40.65
   m_fontStyle: 0
   m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
-  m_lineSpacingMax: 0
+  m_lineSpacingMax: -25
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
@@ -172,3 +175,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b87d17113235f648a9cafa3efa5a771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8002146222929760368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7698969763484766574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
+--- !u!114 &492823028578974646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7698969763484766574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f29d58c6a4fc7344f892d8352425d52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7028576288528102743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7698969763484766574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: 123.9061
+  m_PreferredWidth: 775
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1

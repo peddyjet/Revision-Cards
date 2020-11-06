@@ -3099,7 +3099,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Please Input Your Shcool's Name
+  m_text: Please Input Your School's Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2145c7aa7467eaf4e9a1f4a9b2be2c8b, type: 2}
   m_sharedMaterial: {fileID: 8593976214060017574, guid: 2145c7aa7467eaf4e9a1f4a9b2be2c8b,
@@ -3667,7 +3667,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 594221948}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.46802327
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 592820551479670007}
   - component: {fileID: 592820551479670008}
   - component: {fileID: 592820551479670006}
-  - component: {fileID: 7276596281212602738}
+  - component: {fileID: 5009829680972789347}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -95,14 +95,11 @@ MonoBehaviour:
   question: Question
   answer: Answer
   subject: Test
-  percentThreshold: 0.75
-  easing: 0.2
   subjectQ: {fileID: 592820551908772112}
   questionQ: {fileID: 592820551524396377}
   subjectA: {fileID: 592820553123125034}
   answerA: {fileID: 592820552932512220}
-  dragR: {fileID: 7276596281212602738}
---- !u!114 &7276596281212602738
+--- !u!114 &5009829680972789347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,7 +206,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -226,7 +223,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -523,7 +520,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -540,7 +537,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
