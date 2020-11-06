@@ -73,41 +73,47 @@ public class Drag : MonoBehaviour, IPointerClickHandler
     
     }
 
-    private void Update()
-    {
-        if (flippingover)
+   
+        private void Update()
         {
-            float seconds = 1f;
-
-            timer += Time.deltaTime;
-            if(timer >= seconds / 180)
+            if (flippingover)
             {
+                float speed = 1.0f / 180.0f;
+                timer += Time.deltaTime;
+
+            while (timer >= speed)   // If a frame is slower the speed, we loop to catch up
+            {
+                timer -= speed;
                 transform.Rotate(1, 0, 0);
                 post++;
-                timer = 0;
+
+                if (post == 90)
+                {
+                    subjectQ.gameObject.SetActive(false);
+                    subjectA.gameObject.SetActive(true);
+
+                    questionQ.gameObject.SetActive(false);
+                    answerA.gameObject.SetActive(true);
+                }
+                if (post >= 180)
+                {
+                    subjectQ.gameObject.SetActive(true);
+                    subjectA.gameObject.SetActive(false);
+
+                    questionQ.gameObject.SetActive(true);
+                    answerA.gameObject.SetActive(false);
+
+                    questionQ.text = answer;
+
+                    transform.Rotate(180, 0, 0);
+                    GetComponent<DragR>().enabled = true;
+                    flippingover = false;
+                    post = 0;
+                    timer = 0.0f;
+                }
+            
             }
-            if(post == 90) {
-                subjectQ.gameObject.SetActive(false);
-                subjectA.gameObject.SetActive(true);
-
-                questionQ.gameObject.SetActive(false);
-                answerA.gameObject.SetActive(true);
-            }
-            if(post >= 180)
-            {
-                subjectQ.gameObject.SetActive(true);
-                subjectA.gameObject.SetActive(false);
-
-                questionQ.gameObject.SetActive(true);
-                answerA.gameObject.SetActive(false);
-
-                questionQ.text = answer;
-
-                transform.Rotate(180, 0, 0);
-                GetComponent<DragR>().enabled = true;
-                flippingover = false;
-                post = 0;
-            }
-        }
+        
+    }
     }
 }
