@@ -12,7 +12,14 @@ public class StreakController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GetComponent<TextMeshProUGUI>()) { GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(PATH_FOR_STREAK).ToString() + " Days"; }
+        if (GetComponent<TextMeshProUGUI>()) 
+        {
+            if (DateTime.Parse(PlayerPrefs.GetString(LAST_DATE)) < DateTime.Today.AddDays(-1)) { PlayerPrefs.SetInt(PATH_FOR_STREAK, 0); }
+            
+            GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(PATH_FOR_STREAK).ToString() + " Days";
+            
+            
+        }
         else
         {
             if(PlayerPrefs.GetString(LAST_DATE) == DateTime.Today.ToString()) { return; }

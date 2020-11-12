@@ -35,7 +35,7 @@ public class AdvSet : MonoBehaviour
         //         Path  File Name
         Dictionary<string, string> paths = new Dictionary<string, string>();
 
-         foreach (var i in Directory.GetFiles(@"/storage/emulated/0//Download"))
+         foreach (var i in Directory.GetFiles(@"/storage/emulated/0/Download"))
           {
               if (Path.GetExtension(i) == FILE_EXTENSTION)
               {
@@ -63,7 +63,7 @@ public class AdvSet : MonoBehaviour
         constants.Deserialize();
 
         string epath = "Package" + Random.Range(0, 10000) + FILE_EXTENSTION;
-        string path = @"/storage/emulated/0//Download/" + epath;
+        string path = @"/storage/emulated/0/Download/" + epath;
 
         try
         {
