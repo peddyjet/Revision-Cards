@@ -1,0 +1,2 @@
+# Revision Cards
+Revision Cards (Shortened to RC) is an application designed to help students study and pass their exams. This is by simulating revision cards, which can be created, revised and sorted into categories depending on your performance. The Android App supports creating and loading backups — allowing people to transfer their data quickly and easily. Moreover, a streak is kept, showing people their revision progress.
