@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class TabMaster : MonoBehaviour
 {
-    [Header("Assets")]
-    public Sprite closed = null;
-    public Sprite open = null;
-    public Sprite hovering = null;
+    [Header("Colours")]
+    public Color closed;
+    public Color open;
+    public Color hovering;
 
     public List<Tab> Tabs { get; private set; } = new List<Tab>();
 

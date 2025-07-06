@@ -1,0 +1,65 @@
+{
+    "MonoBehaviour": {
+        "m_Enabled": true,
+        "m_EditorHideFlags": 0,
+        "m_Name": "",
+        "m_EditorClassIdentifier": "",
+        "ToolbarIndex": 0,
+        "m_iOSNotificationSettingsValues": {
+            "m_Keys": [
+                "UnityNotificationRequestAuthorizationOnAppLaunch",
+                "UnityNotificationDefaultAuthorizationOptions",
+                "UnityAddRemoteNotificationCapability",
+                "UnityNotificationRequestAuthorizationForRemoteNotificationsOnAppLaunch",
+                "UnityRemoteNotificationForegroundPresentationOptions",
+                "UnityUseAPSReleaseEnvironment",
+                "UnityUseLocationNotificationTrigger",
+                "UnityAddTimeSensitiveEntitlement"
+            ],
+            "m_Values": [
+                "True",
+                "7",
+                "False",
+                "False",
+                "-1",
+                "False",
+                "False",
+                "False"
+            ]
+        },
+        "m_AndroidNotificationSettingsValues": {
+            "m_Keys": [
+                "UnityNotificationAndroidRescheduleOnDeviceRestart",
+                "UnityNotificationAndroidUseCustomActivity",
+                "UnityNotificationAndroidCustomActivityString",
+                "UnityNotificationAndroidScheduleExactAlarms"
+            ],
+            "m_Values": [
+                "True",
+                "False",
+                "com.unity3d.player.UnityPlayerActivity",
+                "0"
+            ]
+        },
+        "DrawableResources": [
+            {
+                "Id": "mains",
+                "Type": 0,
+                "Asset": {
+                    "fileID": 2800000,
+                    "guid": "bccbf4f4d3166404aae0a2e1a2930eaa",
+                    "type": 3
+                }
+            },
+            {
+                "Id": "mainl",
+                "Type": 1,
+                "Asset": {
+                    "fileID": 2800000,
+                    "guid": "254ab4b2d6e2eca4f894ac66464b095f",
+                    "type": 3
+                }
+            }
+        ]
+    }
+}

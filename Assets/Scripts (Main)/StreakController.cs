@@ -14,7 +14,8 @@ public class StreakController : MonoBehaviour
     {
         if (GetComponent<TextMeshProUGUI>()) 
         {
-            if (DateTime.Parse(PlayerPrefs.GetString(LAST_DATE)) < DateTime.Today.AddDays(-1)) { PlayerPrefs.SetInt(PATH_FOR_STREAK, 0); }
+            var isValidDate = DateTime.TryParse(PlayerPrefs.GetString(LAST_DATE), out var date);
+            if (isValidDate && date < DateTime.Today.AddDays(-1)) { PlayerPrefs.SetInt(PATH_FOR_STREAK, 0); }
             
             GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(PATH_FOR_STREAK).ToString() + " Days";
             

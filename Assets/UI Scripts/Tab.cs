@@ -6,7 +6,6 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Image))]
 public class Tab : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPointerEnterHandler
 {
     [Space]
@@ -16,6 +15,7 @@ public class Tab : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPo
     [SerializeField] UnityEvent closingEvents = null;
     [Space]
     [SerializeField] GameObject window = null;
+    [Space] [SerializeField] private Image targetImage;
 
     bool isOn = false;
 
@@ -25,8 +25,8 @@ public class Tab : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPo
         tabMaster.Subscribe(this);
     }
 
-    public void CloseTab() { closingEvents.Invoke(); window.SetActive(false); GetComponent<Image>().sprite = tabMaster.closed; isOn = false; }
-    public void OpenTab() { openingEvents.Invoke(); window.SetActive(true); GetComponent<Image>().sprite = tabMaster.open; isOn = true; }
+    public void CloseTab() { closingEvents.Invoke(); window.SetActive(false); targetImage.color = tabMaster.closed; isOn = false; }
+    public void OpenTab() { openingEvents.Invoke(); window.SetActive(true); targetImage.color = tabMaster.open; isOn = true; }
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -36,12 +36,12 @@ public class Tab : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPo
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        GetComponent<Image>().sprite = tabMaster.hovering;
+        targetImage.color = tabMaster.hovering;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (isOn) { GetComponent<Image>().sprite = tabMaster.open; }
-        else { GetComponent<Image>().sprite = tabMaster.closed; }
+        if (isOn) { targetImage.color = tabMaster.open; }
+        else { targetImage.color = tabMaster.closed; }
     }
 }
